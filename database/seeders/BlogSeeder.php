@@ -1,0 +1,21 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Blog;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class BlogSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        Blog::factory(10)
+            ->hasComments(3)
+            ->hasImage(1)
+            ->create();
+    }
+}
